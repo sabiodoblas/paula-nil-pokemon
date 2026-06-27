@@ -190,7 +190,7 @@
 
     .pack-header { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.8); letter-spacing: 1.5px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; text-transform: uppercase;}
     .pack-logo { margin: auto 0; text-align: center; color: white; }
-    .pack-logo .main { font-size: 46px; font-weight: 900; display: block; line-height: 40px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .pack-logo .main { font-size: 46px; font-weight: 900; letter-spacing: -2px; display: block; line-height: 40px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     .pack-logo .sub { font-size: 24px; font-weight: 800; color: #fde047; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
     .pack-footer { background: rgba(255, 255, 255, 0.15); color: white; text-align: center; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 12px; backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.1); }
 
@@ -215,7 +215,7 @@
     .badge-trainer strong { color: #0f172a; font-weight: 800; }
 
     .grid-container {
-      max-width: 1200px; width: 100%; margin: 30px auto; padding: 0 24px;
+      max-width: 1250px; width: 100%; margin: 30px auto; padding: 0 24px;
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
     }
     @media(min-width: 550px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
@@ -268,14 +268,14 @@
     <div class="selector-container">
       <div class="char-option" onclick="selectUser('Paula')">
         <div class="char-card-box">
-          <img id="img-paula" src="https://i.postimg.cc/D0bFvT5s/Cromo-Marti.jpg" alt="Entrenadora Paula">
+          <img src="https://i.ibb.co/C51KwQmB/Cromo-Marti.png" alt="Entrenadora Paula">
         </div>
         <div class="char-label">Tria la Paula</div>
       </div>
 
       <div class="char-option" onclick="selectUser('Nil')">
         <div class="char-card-box">
-          <img id="img-nil" src="https://i.postimg.cc/8P2L0kYk/Cromo-Nil.jpg" alt="Entrenador Nil">
+          <img src="https://i.ibb.co/vCBFjWTt/Cromo-Nil.jpg" alt="Entrenador Nil">
         </div>
         <div class="char-label">Tria el Nil</div>
       </div>
@@ -305,7 +305,7 @@
     </header>
 
     <main class="grid-container" id="cards-grid">
-      </main>
+    </main>
   </div>
 
   <div id="unlock-modal" class="modal-overlay hidden">
@@ -321,34 +321,39 @@
   </div>
 
   <script>
-    // BASE DE DADES INTERNA AMB ELS ENLLAÇOS DE LES IMATGES CORREGITS
+    // TO T EL RECOMPTE COMPLET DE LES 26 CARTES DIRECTAMENT D'IMGBB
     const CARD_DATABASE = [
-      { id: 1, name: "Machop", artworkUrl: "https://i.postimg.cc/bJZv3zXv/Cromo-Adri.jpg" },
-      { id: 2, name: "Charmander", artworkUrl: "https://i.postimg.cc/sX1W1z7j/Cromo-Alcober.jpg" },
-      { id: 3, name: "Chikorita", artworkUrl: "https://i.postimg.cc/bYqYV2V6/Cromo-Andrea.jpg" },
-      { id: 4, name: "Kecleon", artworkUrl: "https://i.postimg.cc/sXv0G4Yy/Cromo-Bosch.jpg" },
-      { id: 5, name: "Cubone", artworkUrl: "https://i.postimg.cc/jSRx2bsh/Cromo-Carles.jpg" },
-      { id: 6, name: "Doduo", artworkUrl: "https://i.postimg.cc/c4fCrnTM/Cromo-Dani.jpg" },
-      { id: 7, name: "Diglet", artworkUrl: "https://i.postimg.cc/NjqGZ7yV/Cromo-Edu.jpg" },
-      { id: 8, name: "Vulpix", artworkUrl: "https://i.postimg.cc/C10rY5wS/Cromo-Elsa.jpg" },
-      { id: 9, name: "Whiscash", artworkUrl: "https://i.postimg.cc/y8m5Nf43/Cromo-Eric.jpg" },
-      { id: 10, name: "Kleavor", artworkUrl: "https://i.postimg.cc/6qH6Pj3b/Cromo-Font.jpg" },
-      { id: 11, name: "Snorlax", artworkUrl: "https://i.postimg.cc/jShzW4kF/Cromo-Jon.jpg" },
-      { id: 12, name: "Jigglypuf", artworkUrl: "https://i.postimg.cc/SsdvQZf2/Cromo-Juls.jpg" },
-      { id: 13, name: "Togepi", artworkUrl: "https://i.postimg.cc/7LNp6WJq/Cromo-Katya.jpg" },
-      { id: 14, name: "Komala", artworkUrl: "https://i.postimg.cc/KjCHYm9L/Cromo-Laia.jpg" },
-      { id: 15, name: "Chansey", artworkUrl: "https://i.postimg.cc/wMPPj9c8/Cromo-Maria.jpg" },
-      { id: 16, name: "Koffing", artworkUrl: "https://i.postimg.cc/GhdS9S1x/Cromo-Pol.jpg" },
-      { id: 17, name: "Piplup", artworkUrl: "https://i.postimg.cc/13f0Rzsc/Cromo-Roca.jpg" },
-      { id: 18, name: "Wigglytuff", artworkUrl: "https://i.postimg.cc/Z5Fff25g/Cromo-Sabate.jpg" },
-      { id: 19, name: "Loudred", artworkUrl: "https://i.postimg.cc/N0Y6X2Xk/Cromo-Sabio.jpg" },
-      { id: 20, name: "Graveler", artworkUrl: "https://i.postimg.cc/vHzwN3b4/Cromo-Sante.jpg" },
-      { id: 21, name: "Snorunt", artworkUrl: "https://i.postimg.cc/yNdLp47N/Cromo-Sara.jpg" },
-      { id: 22, name: "Weedle", artworkUrl: "https://i.postimg.cc/g0KCc6Q3/Cromo-Velez.jpg" },
+      { id: 1, name: "Machop", artworkUrl: "https://i.ibb.co/0NRRkRv/Cromo-Adri.png" },
+      { id: 2, name: "Charmander", artworkUrl: "https://i.ibb.co/ccyzN1KY/Cromo-Alcober.png" },
+      { id: 3, name: "Chikorita", artworkUrl: "https://i.ibb.co/7xZrXxZp/Cromo-Andrea.png" },
+      { id: 4, name: "Kecleon", artworkUrl: "https://i.ibb.co/q3nPjhgb/Cromo-Bosch.png" },
+      { id: 5, name: "Cubone", artworkUrl: "https://i.ibb.co/mF5bR685/Cromo-Carles.png" },
+      { id: 6, name: "Doduo", artworkUrl: "https://i.ibb.co/HTqkwM0K/Cromo-Dani.png" },
+      { id: 7, name: "Diglet", artworkUrl: "https://i.ibb.co/VpQF6Mxg/Cromo-Edu.png" },
+      { id: 8, name: "Vulpix", artworkUrl: "https://i.ibb.co/TB1CXPs7/Cromo-Elsa.png" },
+      { id: 9, name: "Whiscash", artworkUrl: "https://i.ibb.co/RGBJHZLN/Cromo-Eric.png" },
+      { id: 10, name: "Kleavor", artworkUrl: "https://i.ibb.co/VWhtrKh2/Cromo-Font.png" },
+      { id: 11, name: "Hector", artworkUrl: "https://i.ibb.co/35R54cn2/Cromo-Hector.png" },
+      { id: 12, name: "Joel", artworkUrl: "https://i.ibb.co/5zYMSKY/Cromo-Joel.png" },
+      { id: 13, name: "Snorlax", artworkUrl: "https://i.ibb.co/Gfb1X97w/Cromo-Jon.png" },
+      { id: 14, name: "Jigglypuf", artworkUrl: "https://i.ibb.co/JFbvZ1cq/Cromo-Juls.jpg" },
+      { id: 15, name: "Togepi", artworkUrl: "https://i.ibb.co/KjjzjMZq/Cromo-Katya.png" },
+      { id: 16, name: "Komala", artworkUrl: "https://i.ibb.co/tTBc2Mc7/Cromo-Laia.png" },
+      { id: 17, name: "Chansey", artworkUrl: "https://i.ibb.co/C3dH9XYs/Cromo-Maria.png" },
+      { id: 18, name: "Paula (Entrenadora)", artworkUrl: "https://i.ibb.co/C51KwQmB/Cromo-Marti.png" },
+      { id: 19, name: "Natalia", artworkUrl: "https://i.ibb.co/Qv109YTX/Cromo-Nata-lia.png" },
+      { id: 20, name: "Nil (Entrenador)", artworkUrl: "https://i.ibb.co/vCBFjWTt/Cromo-Nil.png" },
+      { id: 21, name: "Koffing", artworkUrl: "https://i.ibb.co/Hf6dHJMG/Cromo-Pol.png" },
+      { id: 22, name: "Piplup", artworkUrl: "https://i.ibb.co/q3QBz9kQ/Cromo-Roca.png" },
+      { id: 23, name: "Wigglytuff", artworkUrl: "https://i.postimg.cc/Z5Fff25g/Cromo-Sabate.jpg" },
+      { id: 24, name: "Loudred", artworkUrl: "https://i.postimg.cc/N0Y6X2Xk/Cromo-Sabio.jpg" },
+      { id: 25, name: "Graveler", artworkUrl: "https://i.postimg.cc/vHzwN3b4/Cromo-Sante.jpg" },
+      { id: 26, name: "Snorunt", artworkUrl: "https://i.postimg.cc/yNdLp47N/Cromo-Sara.jpg" },
+      { id: 27, name: "Weedle", artworkUrl: "https://i.postimg.cc/g0KCc6Q3/Cromo-Velez.jpg" },
       { id: 23, name: "Slowpoke", artworkUrl: "https://i.postimg.cc/7ZfCsyQ9/Cromo-Xavi.jpg" }
     ];
 
-    // Auto-numeració seqüencial de les cartes
+    // Càlcul seqüencial d'etiquetes numèriques
     CARD_DATABASE.forEach((card, index) => {
       const currentNum = String(index + 1).padStart(3, '0');
       const totalNum = String(CARD_DATABASE.length).padStart(3, '0');
