@@ -215,7 +215,7 @@
     .badge-trainer strong { color: #0f172a; font-weight: 800; }
 
     .grid-container {
-      max-width: 1250px; width: 100%; margin: 30px auto; padding: 0 24px;
+      max-width: 1200px; width: 100%; margin: 30px auto; padding: 0 24px;
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
     }
     @media(min-width: 550px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
@@ -275,7 +275,7 @@
 
       <div class="char-option" onclick="selectUser('Nil')">
         <div class="char-card-box">
-          <img src="https://i.ibb.co/vCBFjWTt/Cromo-Nil.jpg" alt="Entrenador Nil">
+          <img src="https://i.ibb.co/vCBFjWTt/Cromo-Nil.png" alt="Entrenador Nil">
         </div>
         <div class="char-label">Tria el Nil</div>
       </div>
@@ -321,7 +321,7 @@
   </div>
 
   <script>
-    // TO T EL RECOMPTE COMPLET DE LES 26 CARTES DIRECTAMENT D'IMGBB
+    // BASE DE DADES GLOBAL AMB RUTES ENLLAÇADES DIRECTAMENT DE FORMA SEGURA
     const CARD_DATABASE = [
       { id: 1, name: "Machop", artworkUrl: "https://i.ibb.co/0NRRkRv/Cromo-Adri.png" },
       { id: 2, name: "Charmander", artworkUrl: "https://i.ibb.co/ccyzN1KY/Cromo-Alcober.png" },
@@ -336,7 +336,7 @@
       { id: 11, name: "Hector", artworkUrl: "https://i.ibb.co/35R54cn2/Cromo-Hector.png" },
       { id: 12, name: "Joel", artworkUrl: "https://i.ibb.co/5zYMSKY/Cromo-Joel.png" },
       { id: 13, name: "Snorlax", artworkUrl: "https://i.ibb.co/Gfb1X97w/Cromo-Jon.png" },
-      { id: 14, name: "Jigglypuf", artworkUrl: "https://i.ibb.co/JFbvZ1cq/Cromo-Juls.jpg" },
+      { id: 14, name: "Jigglypuf", artworkUrl: "https://i.ibb.co/JFbvZ1cq/Cromo-Juls.png" },
       { id: 15, name: "Togepi", artworkUrl: "https://i.ibb.co/KjjzjMZq/Cromo-Katya.png" },
       { id: 16, name: "Komala", artworkUrl: "https://i.ibb.co/tTBc2Mc7/Cromo-Laia.png" },
       { id: 17, name: "Chansey", artworkUrl: "https://i.ibb.co/C3dH9XYs/Cromo-Maria.png" },
@@ -345,15 +345,15 @@
       { id: 20, name: "Nil (Entrenador)", artworkUrl: "https://i.ibb.co/vCBFjWTt/Cromo-Nil.png" },
       { id: 21, name: "Koffing", artworkUrl: "https://i.ibb.co/Hf6dHJMG/Cromo-Pol.png" },
       { id: 22, name: "Piplup", artworkUrl: "https://i.ibb.co/q3QBz9kQ/Cromo-Roca.png" },
-      { id: 23, name: "Wigglytuff", artworkUrl: "https://i.postimg.cc/Z5Fff25g/Cromo-Sabate.jpg" },
-      { id: 24, name: "Loudred", artworkUrl: "https://i.postimg.cc/N0Y6X2Xk/Cromo-Sabio.jpg" },
-      { id: 25, name: "Graveler", artworkUrl: "https://i.postimg.cc/vHzwN3b4/Cromo-Sante.jpg" },
-      { id: 26, name: "Snorunt", artworkUrl: "https://i.postimg.cc/yNdLp47N/Cromo-Sara.jpg" },
-      { id: 27, name: "Weedle", artworkUrl: "https://i.postimg.cc/g0KCc6Q3/Cromo-Velez.jpg" },
-      { id: 23, name: "Slowpoke", artworkUrl: "https://i.postimg.cc/7ZfCsyQ9/Cromo-Xavi.jpg" }
+      { id: 23, name: "Wigglytuff", artworkUrl: "https://i.ibb.co/Z6L4xmhH/Cromo-Sabate.png" },
+      { id: 24, name: "Loudred", artworkUrl: "https://i.ibb.co/9mqT6ZkS/Cromo-Sabio.png" },
+      { id: 25, name: "Graveler", artworkUrl: "https://i.ibb.co/NgCFCXY5/Cromo-Sante.png" },
+      { id: 26, name: "Snorunt", artworkUrl: "https://i.ibb.co/BpqWF4x/Cromo-Sara.png" },
+      { id: 27, name: "Weedle", artworkUrl: "https://i.ibb.co/nNZxwMhZ/Cromo-Velez.png" },
+      { id: 28, name: "Slowpoke", artworkUrl: "https://i.ibb.co/23V17chP/Cromo-Xavi.png" }
     ];
 
-    // Càlcul seqüencial d'etiquetes numèriques
+    // Sincronització de numeració interna del llistat
     CARD_DATABASE.forEach((card, index) => {
       const currentNum = String(index + 1).padStart(3, '0');
       const totalNum = String(CARD_DATABASE.length).padStart(3, '0');
