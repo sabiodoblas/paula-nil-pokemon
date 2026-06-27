@@ -57,9 +57,6 @@
       color: #0f172a;
       letter-spacing: -0.5px;
       margin-bottom: 8px;
-      background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     .login-header p {
@@ -81,7 +78,7 @@
       .selector-container {
         grid-template-columns: 1fr;
         gap: 40px;
-        max-width: 280px;
+        max-width: 240px;
       }
     }
 
@@ -98,8 +95,7 @@
       border-radius: 16px;
       box-shadow: 0 20px 35px rgba(15, 23, 42, 0.15);
       overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-      border: 2px solid transparent;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       background: #cbd5e1;
     }
 
@@ -111,8 +107,6 @@
 
     .char-option:hover .char-card-box {
       transform: scale(1.06) translateY(-10px);
-      box-shadow: 0 30px 50px rgba(15, 23, 42, 0.25);
-      border-color: #3b82f6;
     }
 
     .char-label {
@@ -124,14 +118,11 @@
       padding: 12px 28px;
       border-radius: 20px;
       box-shadow: var(--shadow-dark);
-      transition: all 0.2s ease;
-      border: 1px solid rgba(255,255,255,0.8);
     }
 
     .char-option:hover .char-label {
       background: #3b82f6;
       color: white;
-      transform: translateY(-2px);
     }
 
     /* --- PANTALLA 2: SOBRE / BOOSTER PACK --- */
@@ -169,30 +160,15 @@
       justify-content: space-between;
       padding: 26px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .booster-pack:hover { transform: scale(1.04) translateY(-5px); }
-    .booster-pack::before {
-      content: ''; position: absolute; top: 0; left: -150%; width: 60%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      transform: skewX(-20deg); transition: 0.6s;
-    }
-    .booster-pack:hover::before { left: 150%; }
-
-    .booster-pack::after, .pack-crimped-bottom {
-      content: ''; position: absolute; left: 0; right: 0; height: 10px;
-      background: repeating-linear-gradient(90deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 2px, transparent 2px, transparent 4px);
-    }
-    .booster-pack::after { top: 0; }
-    .pack-crimped-bottom { bottom: 0; }
+    .booster-pack:hover { transform: scale(1.04); }
 
     .pack-header { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.8); letter-spacing: 1.5px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; text-transform: uppercase;}
     .pack-logo { margin: auto 0; text-align: center; color: white; }
-    .pack-logo .main { font-size: 46px; font-weight: 900; letter-spacing: -2px; display: block; line-height: 40px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-    .pack-logo .sub { font-size: 24px; font-weight: 800; color: #fde047; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-    .pack-footer { background: rgba(255, 255, 255, 0.15); color: white; text-align: center; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 12px; backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.1); }
+    .pack-logo .main { font-size: 46px; font-weight: 900; display: block; line-height: 40px; }
+    .pack-logo .sub { font-size: 24px; font-weight: 800; color: #fde047; letter-spacing: 3px; text-transform: uppercase; }
+    .pack-footer { background: rgba(255, 255, 255, 0.15); color: white; text-align: center; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 12px; }
 
     /* --- PANTALLA 3: ÀLBUM DE CROMOS --- */
     header {
@@ -205,14 +181,13 @@
       align-items: center;
       border-bottom: 1px solid rgba(30, 41, 59, 0.06);
     }
-    header span { font-size: 11px; font-weight: 800; color: #0284c7; text-transform: uppercase; letter-spacing: 1px; }
-    header h2 { font-size: 20px; font-weight: 800; color: var(--text-main); }
+    header span { font-size: 11px; font-weight: 800; color: #0284c7; text-transform: uppercase; }
+    header h2 { font-size: 20px; font-weight: 800; }
     
     .badge-trainer {
       background: white; padding: 10px 18px; border-radius: 24px; font-size: 13px; font-weight: 700;
-      box-shadow: var(--shadow-dark), var(--shadow-light); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: var(--shadow-dark); color: var(--text-muted);
     }
-    .badge-trainer strong { color: #0f172a; font-weight: 800; }
 
     .grid-container {
       max-width: 1200px; width: 100%; margin: 30px auto; padding: 0 24px;
@@ -232,29 +207,23 @@
 
     .card-back { background: #1e3a8a; border: 5px solid #f59e0b; display: flex; flex-direction: column; justify-content: space-between; padding: 14px; }
     .card-back::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 75%); }
-    .back-logo { width: 46px; height: 46px; border-radius: 50%; border: 3px solid #f59e0b; margin: auto; background: #172554; box-shadow: inset 0 0 12px rgba(0,0,0,0.6); }
+    .back-logo { width: 46px; height: 46px; border-radius: 50%; border: 3px solid #f59e0b; margin: auto; background: #172554; }
     .back-text-top { text-align: center; font-size: 9px; font-weight: 800; color: #f59e0b; letter-spacing: 1.5px; }
-    .back-text-num { text-align: center; font-size: 11px; font-weight: 700; color: #94a3b8; letter-spacing: 0.5px; }
+    .back-text-num { text-align: center; font-size: 11px; font-weight: 700; color: #94a3b8; }
 
     .card-front { background: white; transform: rotateY(180deg); border: 1px solid #e2e8f0; }
     .card-front img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .card-name-label { margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.5px; text-align: center; }
+    .card-name-label { margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--text-muted); text-align: center; }
 
     /* --- MODAL DIÀLEG POPUP --- */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.25s ease-out forwards; }
-    .modal-content { background: white; border-radius: 28px; padding: 28px; max-width: 320px; width: 100%; text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.8); transform: scale(0.95); animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-    .modal-icon { width: 52px; height: 52px; background: #ecfeff; color: #06b6d4; font-size: 22px; font-weight: 800; display: flex; align-items: center; justify-content: center; border-radius: 16px; margin: 0 auto 18px; }
-    .modal-content h3 { font-size: 19px; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
-    .modal-content p { font-size: 15px; color: var(--text-muted); margin-bottom: 26px; font-weight: 500; }
+    .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: white; border-radius: 28px; padding: 28px; max-width: 320px; width: 100%; text-align: center; box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
+    .modal-content h3 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+    .modal-content p { font-size: 15px; color: var(--text-muted); margin-bottom: 26px; }
     .modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .btn-modal { padding: 14px; border: none; border-radius: 16px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .btn-modal { padding: 14px; border: none; border-radius: 16px; font-size: 15px; font-weight: 700; cursor: pointer; }
     .btn-no { background: #f1f5f9; color: #64748b; }
-    .btn-no:hover { background: #e2e8f0; }
-    .btn-si { background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); color: white; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25); }
-    .btn-si:hover { opacity: 0.95; }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes scaleUp { from { transform: scale(0.9); } to { transform: scale(1); } }
+    .btn-si { background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); color: white; }
   </style>
 </head>
 <body>
@@ -268,14 +237,14 @@
     <div class="selector-container">
       <div class="char-option" onclick="selectUser('Paula')">
         <div class="char-card-box">
-          <img src="Cromo_Martí.jpg" alt="Entrenadora Paula">
+          <img src="./img/Cromo_Martí.jpg" alt="Entrenadora Paula">
         </div>
         <div class="char-label">Tria la Paula</div>
       </div>
 
       <div class="char-option" onclick="selectUser('Nil')">
         <div class="char-card-box">
-          <img src="Cromo_Nil.jpg" alt="Entrenador Nil">
+          <img src="./img/Cromo_Nil.jpg" alt="Entrenador Nil">
         </div>
         <div class="char-label">Tria el Nil</div>
       </div>
@@ -291,7 +260,6 @@
         <span class="sub">Pelele</span>
       </div>
       <div class="pack-footer">Toca per Obrir la Col·lecció</div>
-      <div class="pack-crimped-bottom"></div>
     </div>
   </div>
 
@@ -304,7 +272,345 @@
       <div class="badge-trainer">Entrenador: <strong id="trainer-name">Paula</strong></div>
     </header>
 
-    <main class="grid-container" id="cards-grid">
+    <main class="grid-container">
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(1)">
+          <div class="card-inner" id="card-inner-1">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">001/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Adri.jpg" alt="Machop"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Machop</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(2)">
+          <div class="card-inner" id="card-inner-2">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">002/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Alcober.png" alt="Charmander"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Charmander</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(3)">
+          <div class="card-inner" id="card-inner-3">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">003/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Andrea.png" alt="Chikorita"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Chikorita</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(4)">
+          <div class="card-inner" id="card-inner-4">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">004/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Bosch.png" alt="Kecleon"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Kecleon</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(5)">
+          <div class="card-inner" id="card-inner-5">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">005/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Carles.png" alt="Cubone"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Cubone</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(6)">
+          <div class="card-inner" id="card-inner-6">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">006/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Dani.png" alt="Doduo"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Doduo</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(7)">
+          <div class="card-inner" id="card-inner-7">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">007/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Edu.png" alt="Diglet"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Diglet</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(8)">
+          <div class="card-inner" id="card-inner-8">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">008/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Elsa.png" alt="Vulpix"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Vulpix</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(9)">
+          <div class="card-inner" id="card-inner-9">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">009/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Eric.png" alt="Whiscash"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Whiscash</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(10)">
+          <div class="card-inner" id="card-inner-10">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">010/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Font.png" alt="Kleavor"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Kleavor</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(11)">
+          <div class="card-inner" id="card-inner-11">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">011/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Hector.png" alt="Hector"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Hector</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(12)">
+          <div class="card-inner" id="card-inner-12">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">012/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Joel.png" alt="Joel"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Joel</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(13)">
+          <div class="card-inner" id="card-inner-13">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div>
+              <div class="back-text-num">${card.number}</div>
+            </div>
+            <div class="card-face card-front">
+              <img src="./img/Cromo_Jon.png" alt="Snorlax">
+            </div>
+          </div>
+        </div>
+        <div class="card-name-label">Snorlax</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(14)">
+          <div class="card-inner" id="card-inner-14">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">014/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Juls.png" alt="Jigglypuff"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Jigglypuff</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(15)">
+          <div class="card-inner" id="card-inner-15">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">015/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Katya.png" alt="Togepi"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Togepi</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(16)">
+          <div class="card-inner" id="card-inner-16">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">016/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Laia.png" alt="Komala"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Komala</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(17)">
+          <div class="card-inner" id="card-inner-17">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">017/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Maria.png" alt="Chansey"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Chansey</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(18)">
+          <div class="card-inner" id="card-inner-18">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">018/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Martí.jpg" alt="Paula (Entrenadora)"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Paula (Entrenadora)</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(19)">
+          <div class="card-inner" id="card-inner-19">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">019/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Nata-lia.png" alt="Natalia"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Natalia</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(20)">
+          <div class="card-inner" id="card-inner-20">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">020/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Nil.jpg" alt="Nil (Entrenador)"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Nil (Entrenador)</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(21)">
+          <div class="card-inner" id="card-inner-21">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">021/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Pol.png" alt="Koffing"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Koffing</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(22)">
+          <div class="card-inner" id="card-inner-22">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">022/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Roca.png" alt="Piplup"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Piplup</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(23)">
+          <div class="card-inner" id="card-inner-23">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">023/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Sabate.png" alt="Wigglytuff"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Wigglytuff</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(24)">
+          <div class="card-inner" id="card-inner-24">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">024/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Sabio.png" alt="Loudred"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Loudred</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(25)">
+          <div class="card-inner" id="card-inner-25">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">025/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Sante.png" alt="Graveler"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Graveler</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(26)">
+          <div class="card-inner" id="card-inner-26">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">026/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Sara.png" alt="Snorunt"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Snorunt</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(27)">
+          <div class="card-inner" id="card-inner-27">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">027/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Velez.png" alt="Weedle"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Weedle</div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card-3d-box" onclick="handleCardClick(28)">
+          <div class="card-inner" id="card-inner-28">
+            <div class="card-face card-back">
+              <div class="back-text-top">POKÉMON TCG</div><div class="back-logo"></div><div class="back-text-num">028/028</div>
+            </div>
+            <div class="card-face card-front"><img src="./img/Cromo_Xavi.png" alt="Slowpoke"></div>
+          </div>
+        </div>
+        <div class="card-name-label">Slowpoke</div>
+      </div>
     </main>
   </div>
 
@@ -321,45 +627,6 @@
   </div>
 
   <script>
-    // BASE DE DADES AMB ELS NOM DE LES IMATGES DE LA TEVA CARPETA LOCAL
-    const CARD_DATABASE = [
-      { id: 1, name: "Machop", artworkUrl: "Cromo_Adri.jpg" },
-      { id: 2, name: "Charmander", artworkUrl: "Cromo_Alcober.jpg" },
-      { id: 3, name: "Chikorita", artworkUrl: "Cromo_Andrea.jpg" },
-      { id: 4, name: "Kecleon", artworkUrl: "Cromo_Bosch.jpg" },
-      { id: 5, name: "Cubone", artworkUrl: "Cromo_Carles.jpg" },
-      { id: 6, name: "Doduo", artworkUrl: "Cromo_Dani.jpg" },
-      { id: 7, name: "Diglet", artworkUrl: "Cromo_Edu.jpg" },
-      { id: 8, name: "Vulpix", artworkUrl: "Cromo_Elsa.jpg" },
-      { id: 9, name: "Whiscash", artworkUrl: "Cromo_Eric.jpg" },
-      { id: 10, name: "Kleavor", artworkUrl: "Cromo_Font.jpg" },
-      { id: 11, name: "Hector", artworkUrl: "Cromo_Hector.jpg" },
-      { id: 12, name: "Joel", artworkUrl: "Cromo_Joel.jpg" },
-      { id: 13, name: "Snorlax", artworkUrl: "Cromo_Jon.jpg" },
-      { id: 14, name: "Jigglypuf", artworkUrl: "Cromo_Juls.jpg" },
-      { id: 15, name: "Togepi", artworkUrl: "Cromo_Katya.jpg" },
-      { id: 16, name: "Komala", artworkUrl: "Cromo_Laia.jpg" },
-      { id: 17, name: "Chansey", artworkUrl: "Cromo_Maria.jpg" },
-      { id: 18, name: "Paula (Entrenadora)", artworkUrl: "Cromo_Martí.jpg" },
-      { id: 19, name: "Natalia", artworkUrl: "Cromo_Nata-lia.png" },
-      { id: 20, name: "Nil (Entrenador)", artworkUrl: "Cromo_Nil.jpg" },
-      { id: 21, name: "Koffing", artworkUrl: "Cromo_Pol.jpg" },
-      { id: 22, name: "Piplup", artworkUrl: "Cromo_Roca.jpg" },
-      { id: 23, name: "Wigglytuff", artworkUrl: "Cromo_Sabate.jpg" },
-      { id: 24, name: "Loudred", artworkUrl: "Cromo_Sabio.jpg" },
-      { id: 25, name: "Graveler", artworkUrl: "Cromo_Sante.jpg" },
-      { id: 26, name: "Snorunt", artworkUrl: "Cromo_Sara.jpg" },
-      { id: 27, name: "Weedle", artworkUrl: "Cromo_Velez.jpg" },
-      { id: 28, name: "Slowpoke", artworkUrl: "Cromo_Xavi.jpg" }
-    ];
-
-    // Auto-numeració automàtica del set complet
-    CARD_DATABASE.forEach((card, index) => {
-      const currentNum = String(index + 1).padStart(3, '0');
-      const totalNum = String(CARD_DATABASE.length).padStart(3, '0');
-      card.number = `${currentNum}/${totalNum}`;
-    });
-
     let currentUser = "";
     let selectedCardId = null;
     const unlockedCardsRegistry = new Set();
@@ -374,44 +641,10 @@
     function openCollection() {
       document.getElementById('pack-screen').classList.add('hidden');
       document.getElementById('binder-screen').classList.remove('hidden');
-      buildCardGrid();
-    }
-
-    function buildCardGrid() {
-      const grid = document.getElementById('cards-grid');
-      grid.innerHTML = ""; 
-
-      CARD_DATABASE.forEach(card => {
-        const isUnlocked = unlockedCardsRegistry.has(card.id);
-        const cardWrapper = document.createElement('div');
-        cardWrapper.className = 'card-wrapper';
-
-        cardWrapper.innerHTML = `
-          <div class="card-3d-box" onclick="handleCardClick(${card.id})">
-            <div class="card-inner ${isUnlocked ? 'unlocked' : ''}" id="card-inner-${card.id}">
-              
-              <div class="card-face card-back">
-                <div class="back-text-top">POKÉMON TCG</div>
-                <div class="back-logo"></div>
-                <div class="back-text-num">${card.number}</div>
-              </div>
-
-              <div class="card-face card-front">
-                <img src="${card.artworkUrl}" alt="${card.name}">
-              </div>
-
-            </div>
-          </div>
-          <div class="card-name-label">${card.name}</div>
-        `;
-        
-        grid.appendChild(cardWrapper);
-      });
     }
 
     function handleCardClick(cardId) {
       if (unlockedCardsRegistry.has(cardId)) return;
-      
       selectedCardId = cardId;
       document.getElementById('unlock-modal').classList.remove('hidden');
     }
@@ -423,7 +656,6 @@
 
     function confirmUnlockCard() {
       if (selectedCardId === null) return;
-
       unlockedCardsRegistry.add(selectedCardId);
       closeModal();
 
