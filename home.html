@@ -190,7 +190,7 @@
 
     .pack-header { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.8); letter-spacing: 1.5px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; text-transform: uppercase;}
     .pack-logo { margin: auto 0; text-align: center; color: white; }
-    .pack-logo .main { font-size: 46px; font-weight: 900; letter-spacing: -2px; display: block; line-height: 40px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .pack-logo .main { font-size: 46px; font-weight: 900; display: block; line-height: 40px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
     .pack-logo .sub { font-size: 24px; font-weight: 800; color: #fde047; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
     .pack-footer { background: rgba(255, 255, 255, 0.15); color: white; text-align: center; font-size: 12px; font-weight: 700; padding: 10px; border-radius: 12px; backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.1); }
 
@@ -268,14 +268,14 @@
     <div class="selector-container">
       <div class="char-option" onclick="selectUser('Paula')">
         <div class="char-card-box">
-          <img id="img-paula" src="" alt="Entrenadora Paula">
+          <img src="https://i.postimg.cc/D0bFvT5s/Cromo-Marti.jpg" alt="Entrenadora Paula">
         </div>
         <div class="char-label">Tria la Paula</div>
       </div>
 
       <div class="char-option" onclick="selectUser('Nil')">
         <div class="char-card-box">
-          <img id="img-nil" src="" alt="Entrenador Nil">
+          <img src="https://i.postimg.cc/8P2L0kYk/Cromo-Nil.jpg" alt="Entrenador Nil">
         </div>
         <div class="char-label">Tria el Nil</div>
       </div>
@@ -321,7 +321,112 @@
   </div>
 
   <script>
-    // FOTOS COMPRIMIDES DIRECTAMENT EN EL CODI (BASE64) PER EVITAR RESTRICCIONS LOCALS DELS NAVEGADORS
-    const IMAGES_DATABASE = {
-      // Foto real del cromo Paula optimitzada en text
-      paula: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAFA3SGhcXFhkXFhkXGBgcHSAlHSAgHTg6JDg0P0pGT09KREtNWFZgU1hiU0pNY2ZgYmZidWdma2N0eXpmeGZia2L/2wBDAQgGBg0NDRE0NRE0YVJhUmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmFiYmL/wAARCAH0AasDASIAAhEBAxEB/8QAGwABAQEBAQEBAQAAAAAAAAAAAAECAwQFBgf/xAAzEAACAgEDAwMDAwQCAgMBAAAAAQIRAxIxIUFhBFFxEyKBMkKRoVKBscHRI/Bi4fEzkv/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAaEQEBAQEBAQEAAAAAAAAAAAAAEQECEiEx/9oADAMBAAIRAxEAPwD82bMmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3g5scGW3hNEnmDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0XmDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0bMmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0SeYObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0bMmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0SeYObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0bMmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0SeYObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4bM8wS9wc2ODLbwY6ObHBlp4Xf0ObHBlt4bYObHBlg5ZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeDmxwZbeE0S+YObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBlt4ObHBl
+    // BASE DE DADES INTERNA AMB TOTS ELS ENLLAÇOS EN DIRECTE DES DE POSTIMG GALLERIES
+    const CARD_DATABASE = [
+      { id: 1, name: "Machop", artworkUrl: "https://i.postimg.cc/bJZv3zXv/Cromo-Adri.jpg" },
+      { id: 2, name: "Charmander", artworkUrl: "https://i.postimg.cc/sX1W1z7j/Cromo-Alcober.jpg" },
+      { id: 3, name: "Chikorita", artworkUrl: "https://i.postimg.cc/bYqYV2V6/Cromo-Andrea.jpg" },
+      { id: 4, name: "Kecleon", artworkUrl: "https://i.postimg.cc/sXv0G4Yy/Cromo-Bosch.jpg" },
+      { id: 5, name: "Cubone", artworkUrl: "https://i.postimg.cc/jSRx2bsh/Cromo-Carles.jpg" },
+      { id: 6, name: "Doduo", artworkUrl: "https://i.postimg.cc/c4fCrnTM/Cromo-Dani.jpg" },
+      { id: 7, name: "Diglet", artworkUrl: "https://i.postimg.cc/NjqGZ7yV/Cromo-Edu.jpg" },
+      { id: 8, name: "Vulpix", artworkUrl: "https://i.postimg.cc/C10rY5wS/Cromo-Elsa.jpg" },
+      { id: 9, name: "Whiscash", artworkUrl: "https://i.postimg.cc/y8m5Nf43/Cromo-Eric.jpg" },
+      { id: 10, name: "Kleavor", artworkUrl: "https://i.postimg.cc/6qH6Pj3b/Cromo-Font.jpg" },
+      { id: 11, name: "Snorlax", artworkUrl: "https://i.postimg.cc/jShzW4kF/Cromo-Jon.jpg" },
+      { id: 12, name: "Jigglypuf", artworkUrl: "https://i.postimg.cc/SsdvQZf2/Cromo-Juls.jpg" },
+      { id: 13, name: "Togepi", artworkUrl: "https://i.postimg.cc/7LNp6WJq/Cromo-Katya.jpg" },
+      { id: 14, name: "Komala", artworkUrl: "https://i.postimg.cc/KjCHYm9L/Cromo-Laia.jpg" },
+      { id: 15, name: "Chansey", artworkUrl: "https://i.postimg.cc/wMPPj9c8/Cromo-Maria.jpg" },
+      { id: 16, name: "Koffing", artworkUrl: "https://i.postimg.cc/GhdS9S1x/Cromo-Pol.jpg" },
+      { id: 17, name: "Piplup", artworkUrl: "https://i.postimg.cc/13f0Rzsc/Cromo-Roca.jpg" },
+      { id: 18, name: "Wigglytuff", artworkUrl: "https://i.postimg.cc/Z5Fff25g/Cromo-Sabate.jpg" },
+      { id: 19, name: "Loudred", artworkUrl: "https://i.postimg.cc/N0Y6X2Xk/Cromo-Sabio.jpg" },
+      { id: 20, name: "Graveler", artworkUrl: "https://i.postimg.cc/vHzwN3b4/Cromo-Sante.jpg" },
+      { id: 21, name: "Snorunt", artworkUrl: "https://i.postimg.cc/yNdLp47N/Cromo-Sara.jpg" },
+      { id: 22, name: "Weedle", artworkUrl: "https://i.postimg.cc/g0KCc6Q3/Cromo-Velez.jpg" },
+      { id: 23, name: "Slowpoke", artworkUrl: "https://i.postimg.cc/7ZfCsyQ9/Cromo-Xavi.jpg" }
+    ];
+
+    // Auto-numeració automàtica del set complet
+    CARD_DATABASE.forEach((card, index) => {
+      const currentNum = String(index + 1).padStart(3, '0');
+      const totalNum = String(CARD_DATABASE.length).padStart(3, '0');
+      card.number = `${currentNum}/${totalNum}`;
+    });
+
+    let currentUser = "";
+    let selectedCardId = null;
+    const unlockedCardsRegistry = new Set();
+
+    function selectUser(user) {
+      currentUser = user;
+      document.getElementById('trainer-name').innerText = user;
+      document.getElementById('login-screen').classList.add('hidden');
+      document.getElementById('pack-screen').classList.remove('hidden');
+    }
+
+    function openCollection() {
+      document.getElementById('pack-screen').classList.add('hidden');
+      document.getElementById('binder-screen').classList.remove('hidden');
+      buildCardGrid();
+    }
+
+    function buildCardGrid() {
+      const grid = document.getElementById('cards-grid');
+      grid.innerHTML = ""; 
+
+      CARD_DATABASE.forEach(card => {
+        const isUnlocked = unlockedCardsRegistry.has(card.id);
+        const cardWrapper = document.createElement('div');
+        cardWrapper.className = 'card-wrapper';
+
+        cardWrapper.innerHTML = `
+          <div class="card-3d-box" onclick="handleCardClick(${card.id})">
+            <div class="card-inner ${isUnlocked ? 'unlocked' : ''}" id="card-inner-${card.id}">
+              
+              <div class="card-face card-back">
+                <div class="back-text-top">POKÉMON TCG</div>
+                <div class="back-logo"></div>
+                <div class="back-text-num">${card.number}</div>
+              </div>
+
+              <div class="card-face card-front">
+                <img src="${card.artworkUrl}" alt="${card.name}">
+              </div>
+
+            </div>
+          </div>
+          <div class="card-name-label">${card.name}</div>
+        `;
+        
+        grid.appendChild(cardWrapper);
+      });
+    }
+
+    function handleCardClick(cardId) {
+      if (unlockedCardsRegistry.has(cardId)) return;
+      
+      selectedCardId = cardId;
+      document.getElementById('unlock-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('unlock-modal').classList.add('hidden');
+      selectedCardId = null;
+    }
+
+    function confirmUnlockCard() {
+      if (selectedCardId === null) return;
+
+      unlockedCardsRegistry.add(selectedCardId);
+      closeModal();
+
+      const targetCardInner = document.getElementById(`card-inner-${selectedCardId}`);
+      if (targetCardInner) {
+        targetCardInner.classList.add('unlocked');
+      }
+    }
+  </script>
+</body>
+</html>
