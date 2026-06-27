@@ -268,14 +268,14 @@
     <div class="selector-container">
       <div class="char-option" onclick="selectUser('Paula')">
         <div class="char-card-box">
-          <img src="https://i.ibb.co/C51KwQmB/Cromo-Marti.png" alt="Entrenadora Paula">
+          <img src="Cromo_Martí.jpg" alt="Entrenadora Paula">
         </div>
         <div class="char-label">Tria la Paula</div>
       </div>
 
       <div class="char-option" onclick="selectUser('Nil')">
         <div class="char-card-box">
-          <img src="https://i.ibb.co/vCBFjWTt/Cromo-Nil.png" alt="Entrenador Nil">
+          <img src="Cromo_Nil.jpg" alt="Entrenador Nil">
         </div>
         <div class="char-label">Tria el Nil</div>
       </div>
@@ -321,39 +321,39 @@
   </div>
 
   <script>
-    // BASE DE DADES GLOBAL AMB RUTES ENLLAÇADES DIRECTAMENT DE FORMA SEGURA
+    // BASE DE DADES AMB ELS NOM DE LES IMATGES DE LA TEVA CARPETA LOCAL
     const CARD_DATABASE = [
-      { id: 1, name: "Machop", artworkUrl: "https://i.ibb.co/0NRRkRv/Cromo-Adri.png" },
-      { id: 2, name: "Charmander", artworkUrl: "https://i.ibb.co/ccyzN1KY/Cromo-Alcober.png" },
-      { id: 3, name: "Chikorita", artworkUrl: "https://i.ibb.co/7xZrXxZp/Cromo-Andrea.png" },
-      { id: 4, name: "Kecleon", artworkUrl: "https://i.ibb.co/q3nPjhgb/Cromo-Bosch.png" },
-      { id: 5, name: "Cubone", artworkUrl: "https://i.ibb.co/mF5bR685/Cromo-Carles.png" },
-      { id: 6, name: "Doduo", artworkUrl: "https://i.ibb.co/HTqkwM0K/Cromo-Dani.png" },
-      { id: 7, name: "Diglet", artworkUrl: "https://i.ibb.co/VpQF6Mxg/Cromo-Edu.png" },
-      { id: 8, name: "Vulpix", artworkUrl: "https://i.ibb.co/TB1CXPs7/Cromo-Elsa.png" },
-      { id: 9, name: "Whiscash", artworkUrl: "https://i.ibb.co/RGBJHZLN/Cromo-Eric.png" },
-      { id: 10, name: "Kleavor", artworkUrl: "https://i.ibb.co/VWhtrKh2/Cromo-Font.png" },
-      { id: 11, name: "Hector", artworkUrl: "https://i.ibb.co/35R54cn2/Cromo-Hector.png" },
-      { id: 12, name: "Joel", artworkUrl: "https://i.ibb.co/5zYMSKY/Cromo-Joel.png" },
-      { id: 13, name: "Snorlax", artworkUrl: "https://i.ibb.co/Gfb1X97w/Cromo-Jon.png" },
-      { id: 14, name: "Jigglypuf", artworkUrl: "https://i.ibb.co/JFbvZ1cq/Cromo-Juls.png" },
-      { id: 15, name: "Togepi", artworkUrl: "https://i.ibb.co/KjjzjMZq/Cromo-Katya.png" },
-      { id: 16, name: "Komala", artworkUrl: "https://i.ibb.co/tTBc2Mc7/Cromo-Laia.png" },
-      { id: 17, name: "Chansey", artworkUrl: "https://i.ibb.co/C3dH9XYs/Cromo-Maria.png" },
-      { id: 18, name: "Paula (Entrenadora)", artworkUrl: "https://i.ibb.co/C51KwQmB/Cromo-Marti.png" },
-      { id: 19, name: "Natalia", artworkUrl: "https://i.ibb.co/Qv109YTX/Cromo-Nata-lia.png" },
-      { id: 20, name: "Nil (Entrenador)", artworkUrl: "https://i.ibb.co/vCBFjWTt/Cromo-Nil.png" },
-      { id: 21, name: "Koffing", artworkUrl: "https://i.ibb.co/Hf6dHJMG/Cromo-Pol.png" },
-      { id: 22, name: "Piplup", artworkUrl: "https://i.ibb.co/q3QBz9kQ/Cromo-Roca.png" },
-      { id: 23, name: "Wigglytuff", artworkUrl: "https://i.ibb.co/Z6L4xmhH/Cromo-Sabate.png" },
-      { id: 24, name: "Loudred", artworkUrl: "https://i.ibb.co/9mqT6ZkS/Cromo-Sabio.png" },
-      { id: 25, name: "Graveler", artworkUrl: "https://i.ibb.co/NgCFCXY5/Cromo-Sante.png" },
-      { id: 26, name: "Snorunt", artworkUrl: "https://i.ibb.co/BpqWF4x/Cromo-Sara.png" },
-      { id: 27, name: "Weedle", artworkUrl: "https://i.ibb.co/nNZxwMhZ/Cromo-Velez.png" },
-      { id: 28, name: "Slowpoke", artworkUrl: "https://i.ibb.co/23V17chP/Cromo-Xavi.png" }
+      { id: 1, name: "Machop", artworkUrl: "Cromo_Adri.jpg" },
+      { id: 2, name: "Charmander", artworkUrl: "Cromo_Alcober.jpg" },
+      { id: 3, name: "Chikorita", artworkUrl: "Cromo_Andrea.jpg" },
+      { id: 4, name: "Kecleon", artworkUrl: "Cromo_Bosch.jpg" },
+      { id: 5, name: "Cubone", artworkUrl: "Cromo_Carles.jpg" },
+      { id: 6, name: "Doduo", artworkUrl: "Cromo_Dani.jpg" },
+      { id: 7, name: "Diglet", artworkUrl: "Cromo_Edu.jpg" },
+      { id: 8, name: "Vulpix", artworkUrl: "Cromo_Elsa.jpg" },
+      { id: 9, name: "Whiscash", artworkUrl: "Cromo_Eric.jpg" },
+      { id: 10, name: "Kleavor", artworkUrl: "Cromo_Font.jpg" },
+      { id: 11, name: "Hector", artworkUrl: "Cromo_Hector.jpg" },
+      { id: 12, name: "Joel", artworkUrl: "Cromo_Joel.jpg" },
+      { id: 13, name: "Snorlax", artworkUrl: "Cromo_Jon.jpg" },
+      { id: 14, name: "Jigglypuf", artworkUrl: "Cromo_Juls.jpg" },
+      { id: 15, name: "Togepi", artworkUrl: "Cromo_Katya.jpg" },
+      { id: 16, name: "Komala", artworkUrl: "Cromo_Laia.jpg" },
+      { id: 17, name: "Chansey", artworkUrl: "Cromo_Maria.jpg" },
+      { id: 18, name: "Paula (Entrenadora)", artworkUrl: "Cromo_Martí.jpg" },
+      { id: 19, name: "Natalia", artworkUrl: "Cromo_Nata-lia.png" },
+      { id: 20, name: "Nil (Entrenador)", artworkUrl: "Cromo_Nil.jpg" },
+      { id: 21, name: "Koffing", artworkUrl: "Cromo_Pol.jpg" },
+      { id: 22, name: "Piplup", artworkUrl: "Cromo_Roca.jpg" },
+      { id: 23, name: "Wigglytuff", artworkUrl: "Cromo_Sabate.jpg" },
+      { id: 24, name: "Loudred", artworkUrl: "Cromo_Sabio.jpg" },
+      { id: 25, name: "Graveler", artworkUrl: "Cromo_Sante.jpg" },
+      { id: 26, name: "Snorunt", artworkUrl: "Cromo_Sara.jpg" },
+      { id: 27, name: "Weedle", artworkUrl: "Cromo_Velez.jpg" },
+      { id: 28, name: "Slowpoke", artworkUrl: "Cromo_Xavi.jpg" }
     ];
 
-    // Sincronització de numeració interna del llistat
+    // Auto-numeració automàtica del set complet
     CARD_DATABASE.forEach((card, index) => {
       const currentNum = String(index + 1).padStart(3, '0');
       const totalNum = String(CARD_DATABASE.length).padStart(3, '0');
